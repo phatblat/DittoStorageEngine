@@ -16,7 +16,10 @@ let package = Package(
     targets: [
         .target(
             name: "DittoStorageEngine",
-            dependencies: []),
+            dependencies: [
+                .product(name: "DittoSwift", package: "DittoSwiftPackage"),
+                .product(name: "Bodega", package: "Bodega"),
+            ]),
         .testTarget(
             name: "DittoStorageEngineTests",
             dependencies: ["DittoStorageEngine"]),
