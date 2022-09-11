@@ -104,22 +104,12 @@ update: resolve ## Updates dependencies
 	swift package update
 
 .PHONY: build
-build: copyRunResources ## Builds the package
+build: ## Builds the package
 	swift build $(SWIFTC_FLAGS) $(LINKER_FLAGS)
 
 .PHONY: test
-test: build copyTestResources ## Tests the package
+test: build ## Tests the package
 	swift test --enable-test-discovery
-
-.PHONY: copyRunResources
-copyRunResources: ## Copies runtime resources
-	mkdir -p ${RUN_RESOURCES_DIRECTORY}
-	cp -r Resources/* ${RUN_RESOURCES_DIRECTORY}
-
-.PHONY: copyTestResources
-copyTestResources:## Copies test resources
-	mkdir -p ${TEST_RESOURCES_DIRECTORY}
-	cp -r Resources/* ${TEST_RESOURCES_DIRECTORY}
 
 .PHONY: run
 # make run ARGS="asdf"
