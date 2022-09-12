@@ -1,6 +1,7 @@
-public struct DittoStorageEngine {
-    public private(set) var text = "Hello, World!"
+import Bodega
+import DittoSwift
+import Foundation
 
-    public init() {
-    }
+/// A ``StorageEngine`` based on a Ditto data store.
+public actor DittoStorageEngine: StorageEngine {
 }
