@@ -3,5 +3,6 @@ import DittoSwift
 import Foundation
 
 /// A ``StorageEngine`` based on a Ditto data store.
-public actor DittoStorageEngine: StorageEngine {
+public actor DittoStorageEngine {
+    let text = "Hello, World!"
 }
