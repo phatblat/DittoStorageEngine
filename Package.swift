@@ -14,7 +14,8 @@ let package = Package(
             targets: ["DittoStorageEngine"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/getditto/DittoSwiftPackage.git", .upToNextMajor(from: "2.0.0")),
+//        .package(url: "https://github.com/getditto/DittoSwiftPackage.git", branch: "ben/target-wrapper"),
+        .package(path: "../../ditto/DittoSwiftPackage"),
         .package(url: "https://github.com/mergesort/Bodega.git", .upToNextMajor(from: "1.0.0")),
     ],
     targets: [
